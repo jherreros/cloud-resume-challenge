@@ -3,15 +3,24 @@ require(`dotenv`).config({
 })
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const siteAddress = new URL("https://www.juanherreros.com")
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    siteTitle: `Juan Herreros Elorza`,
+    siteTitleAlt: `Juan Herreros Elorza - Personal site`,
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "juanherreros.com",
+        protocol: siteAddress.protocol.slice(0, -1),
+        hostname: siteAddress.hostname,
+      },
+    },
+    {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
-      // See the theme's README for all available options
       options: {
         navigation: [
           {
@@ -22,32 +31,32 @@ module.exports = {
             title: `About`,
             slug: `/about`,
           },
+          {
+            title: `CV`,
+            slug: `/cv`,
+          },
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
-          },
-          {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
+            name: `LinkedIn`,
+            url: `https://www.linkedin.com/in/juan-herreros-elorza/`,
           },
         ],
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        siteUrl: siteAddress.href.slice(0, -1),
       },
     },
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `Juan Herreros Elorza personal site`,
+        short_name: `JH-site`,
+        description: `This is the personal website of Juan Herreros Elorza.`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,
