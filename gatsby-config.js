@@ -38,6 +38,9 @@ module.exports = {
         ],
         externalLinks: [
           {
+            name: `GitHub`,
+            url: `https://github.com/jherreros/cloud-resume-challenge`,
+          },          {
             name: `LinkedIn`,
             url: `https://www.linkedin.com/in/juan-herreros-elorza/`,
           },
