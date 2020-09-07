@@ -58,7 +58,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Juan Herreros Elorza personal site`,
-        short_name: `JH-site`,
+        short_name: `Juan`,
         description: `This is the personal website of Juan Herreros Elorza.`,
         start_url: `/`,
         background_color: `#fff`,
