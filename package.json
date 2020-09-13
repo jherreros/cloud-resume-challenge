@@ -18,6 +18,8 @@
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "^2.5.0",
+    "axios": "^0.20.0",
+    "cors": "^2.8.5",
     "gatsby": "^2.20.36",
     "gatsby-plugin-canonical-urls": "^2.3.10",
     "gatsby-plugin-google-analytics": "^2.1.4",
@@ -28,7 +30,8 @@
     "gatsby-plugin-sitemap": "^2.2.19",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.10",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
     "cross-env": "^5.2.0"
