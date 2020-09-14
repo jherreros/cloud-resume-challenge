@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 const axios = require('axios');
-const apiUrl = 'https://o1bo5vy254.execute-api.eu-central-1.amazonaws.com/Prod/count/default';
+const apiUrl = 'https://api.juanherreros.com/count/default';
 
 export default class MyComponent extends Component {
   state = {
