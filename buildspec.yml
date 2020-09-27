@@ -1,4 +1,8 @@
 version: 0.2
+env:
+    parameter-store:
+        API_KEY: /CodeBuild/API_KEY
+
 phases:
     install:
         runtime-versions:
@@ -9,6 +13,7 @@ phases:
     pre_build:
         commands:
             - 'npm ci --production'
+            - sed -i "s/API_KEY_PLACEHOLDER/$API_KEY/g" src/@lekoarts/gatsby-theme-minimal-blog/texts/MyComponent.js
     build:
         commands:
             - 'npm run-script build'

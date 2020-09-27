@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-const axios = require('axios');
 const apiUrl = 'https://api.juanherreros.com/count/default';
+const apiKey = "API_KEY_PLACEHOLDER";
 
 export default class MyComponent extends Component {
   state = {
@@ -11,19 +11,28 @@ export default class MyComponent extends Component {
 
   componentDidMount() {
 
-    axios.get(apiUrl).then(
+    fetch(apiUrl, {
+      method: 'GET', 
+      mode: 'cors',
+      headers: {
+        'X-Api-Key': apiKey,
+      },
+    }).then(
       response => {
-        this.setState({
-          isLoaded: true,
-          userCount: response.data.userCount
-        });
+        response.json()
+          .then((data) => {
+            this.setState({
+              userCount: data['userCount'],
+              isLoaded: true
+            });
+          })
       },
       error => {
         this.setState({
           isLoaded: true,
           error
         });
-      }
+      },
     )
   }
 
@@ -35,7 +44,7 @@ export default class MyComponent extends Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <p>Number of visits: {userCount}</p>
+        <div>Number of visits: {userCount}</div>
       );
     }
   }
