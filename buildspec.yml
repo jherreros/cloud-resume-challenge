@@ -6,7 +6,7 @@ phases:
             nodejs: 12
         commands:
             - 'touch .npmignore'
-            - 'npm install -g gatsby'
+            - 'npm install -g gatsby-cli'
     pre_build:
         commands:
             - 'npm ci --production'
