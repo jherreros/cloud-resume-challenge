@@ -5,17 +5,13 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    // You can overwrite values here that are used for the SEO component
-    // You can also add new values here to query them like usual
-    // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.mjs
-    siteTitle: `Minimal Blog`,
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
-    siteHeadline: `Minimal Blog - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://minimal-blog.lekoarts.de`,
-    siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
-    siteImage: `/banner.jpg`,
+    siteTitle: `Juan Herreros Elorza`,
+    siteTitleAlt: `Juan Herreros Elorza - Personal site`,
+    siteHeadline: `Juan Herreros Elorza - Personal site`,
+    siteUrl: `https://juanherreros.com`,
+    siteDescription: `This is my personal web page. Here I host my CV and a blog about the creation of the project.`,
     siteLanguage: `en`,
-    author: `@lekoarts_de`,
+    author: `Juan Herreros Elorza`,
   },
   trailingSlash: `always`,
   plugins: [
@@ -32,15 +28,22 @@ const config: GatsbyConfig = {
             title: `About`,
             slug: `/about`,
           },
+          {
+            title: `CV`,
+            slug: `/cv`,
+          },
+          {
+            title: `Talks`,
+            slug: `/talks`,
+          },
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
-          },
-          {
-            name: `Homepage`,
-            url: `https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter`,
+            name: `GitHub`,
+            url: `https://github.com/jherreros?tab=repositories`,
+          },          {
+            name: `LinkedIn`,
+            url: `https://www.linkedin.com/in/juan-herreros-elorza/`,
           },
         ],
       },
@@ -54,9 +57,9 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `Juan Herreros Elorza personal site`,
+        short_name: `Juan`,
+        description: `This is the personal website of Juan Herreros Elorza.`,
         start_url: `/`,
         background_color: `#fff`,
         // This will impact how browsers show your PWA/website
