@@ -1,0 +1,11 @@
+{
+    "customizations": {
+      "codespaces": {
+        "repositories": {
+          "jherreros/jherreros.github.io": {
+            "permissions": "write-all"
+          }
+        }
+      }
+    }
+  }
