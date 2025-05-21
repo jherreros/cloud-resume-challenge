@@ -8,7 +8,7 @@ const config: GatsbyConfig = {
     siteTitle: `Juan Herreros Elorza`,
     siteTitleAlt: `Juan Herreros Elorza - Personal site`,
     siteHeadline: `Juan Herreros Elorza - Personal site`,
-    siteUrl: `https://juanherreros.com`,
+    siteUrl: `https://old.juanherreros.com`,
     siteDescription: `This is my personal web page. Here I host my CV and a blog about the creation of the project.`,
     siteLanguage: `en`,
     author: `Juan Herreros Elorza`,
